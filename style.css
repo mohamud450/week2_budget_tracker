@@ -1,0 +1,235 @@
+/* General page styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #243247;
+  background-color: #f3f6fb;
+}
+
+.site-header {
+  padding: 24px 6%;
+  color: white;
+  background: #173b66;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand img {
+  object-fit: contain;
+  padding: 7px;
+  border-radius: 12px;
+  background: white;
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 3px;
+}
+
+.tagline {
+  margin-bottom: 0;
+  color: #dce9f8;
+}
+
+.container {
+  width: min(100% - 32px, 960px);
+  margin: 30px auto;
+}
+
+section {
+  margin-bottom: 24px;
+  padding: 24px;
+  border: 1px solid #e0e7f0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 12px rgba(22, 48, 78, 0.05);
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: #173b66;
+}
+
+.summary-card {
+  display: inline-block;
+  min-width: 220px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: #e8f2ff;
+}
+
+.summary-label {
+  margin-bottom: 4px;
+  color: #53677f;
+}
+
+.summary-amount {
+  margin-bottom: 0;
+  color: #145a32;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.intro {
+  margin: 16px 0 0;
+}
+
+/* Form layout */
+.add-expense-section form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 700;
+}
+
+input:not([type="submit"]), select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #bdc9d8;
+  border-radius: 7px;
+  font: inherit;
+  background: #fff;
+}
+
+input:focus, select:focus {
+  outline: 3px solid rgba(38, 119, 190, 0.2);
+  border-color: #2677be;
+}
+
+.add-expense-section > form > button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 11px 22px;
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  background: #176b45;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-expense-section > form > button:hover {
+  background: #105537;
+}
+
+.form-note {
+  margin: 12px 0 0;
+  color: #68788c;
+  font-size: 0.9rem;
+}
+
+/* Expense table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.expenses-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expenses-section th,
+.expenses-section td {
+  padding: 12px 14px;
+  border: 1px solid #d6dfeb;
+  text-align: left;
+}
+
+.expenses-section thead {
+  color: white;
+  background: #2677a8;
+}
+
+/* Positional pseudo-class: alternate table row backgrounds */
+.expenses-section tbody tr:nth-child(even) {
+  background: #edf4fa;
+}
+
+/* Hover pseudo-class: highlight the row under the pointer */
+.expenses-section tbody tr:hover {
+  background: #dceeff;
+}
+
+/* Details / summary interaction */
+.help-section details {
+  padding: 4px 0;
+}
+
+.help-section summary {
+  color: #173b66;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.help-section details p {
+  margin: 12px 0 0;
+}
+
+/* Responsive video */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #e5eaf0;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.site-footer {
+  padding: 20px;
+  color: #e6eef8;
+  background: #173b66;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    align-items: flex-start;
+  }
+
+  .brand img {
+    width: 48px;
+    height: auto;
+  }
+
+  .add-expense-section form {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 18px;
+  }
+}

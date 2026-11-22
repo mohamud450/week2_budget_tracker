@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Budget & Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+        alt="Personal budget tracker wallet logo"
+        width="64"
+      >
+      <div>
+        <h1>Personal Budget Tracker</h1>
+        <p class="tagline">Plan wisely. Spend mindfully. Save more.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="summary-section" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">My Budget Overview</h2>
+      <div class="summary-card">
+        <p class="summary-label">Monthly budget</p>
+        <p class="summary-amount">KSh 50,000</p>
+      </div>
+      <p class="intro">Use this tracker to record expenses and keep an eye on your spending.</p>
+    </section>
+
+    <section class="add-expense-section" aria-labelledby="form-heading">
+      <h2 id="form-heading">Add an Expense</h2>
+      <form action="#" method="get">
+        <div class="form-group">
+          <label for="expense-name">Expense name</label>
+          <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries" required>
+        </div>
+
+        <div class="form-group">
+          <label for="expense-amount">Amount (KSh)</label>
+          <input type="number" id="expense-amount" name="expense-amount" min="0" step="0.01" placeholder="e.g. 1500" required>
+        </div>
+
+        <div class="form-group">
+          <label for="expense-category">Category</label>
+          <select id="expense-category" name="expense-category" required>
+            <option value="">Choose a category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Rent">Rent</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="expense-date">Date</label>
+          <input type="date" id="expense-date" name="expense-date" required>
+        </div>
+
+        <button type="button" id="add-expense-button">Add Expense</button>
+      </form>
+      <p class="form-note">The button is a visual placeholder for this week's assignment. JavaScript functionality will be added later.</p>
+    </section>
+
+    <section class="expenses-section" aria-labelledby="expenses-heading">
+      <h2 id="expenses-heading">Recent Expenses</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Category</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Groceries</td>
+              <td>KSh 3,500</td>
+              <td>Food</td>
+              <td>2026-11-02</td>
+            </tr>
+            <tr>
+              <td>Bus fare</td>
+              <td>KSh 800</td>
+              <td>Transport</td>
+              <td>2026-11-04</td>
+            </tr>
+            <tr>
+              <td>Monthly rent</td>
+              <td>KSh 15,000</td>
+              <td>Rent</td>
+              <td>2026-11-05</td>
+            </tr>
+            <tr>
+              <td>Movie ticket</td>
+              <td>KSh 1,200</td>
+              <td>Entertainment</td>
+              <td>2026-11-08</td>
+            </tr>
+            <tr>
+              <td>Mobile data</td>
+              <td>KSh 500</td>
+              <td>Other</td>
+              <td>2026-11-10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="help-section" aria-labelledby="help-heading">
+      <details>
+        <summary id="help-heading">How to use this tracker</summary>
+        <p>Enter the expense name, amount, category, and date in the form above. The expense table below shows five sample records. In a later week, JavaScript will make the Add Expense button save new entries to the table.</p>
+      </details>
+    </section>
+
+    <section class="video-section" aria-labelledby="video-heading">
+      <h2 id="video-heading">Learn About Budgeting</h2>
+      <p>Watch this video as an example of embedded multimedia content.</p>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/ysz5S6PUM-U"
+          title="Budgeting and money management video"
+          width="560"
+          height="315"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Personal Budget Tracker. Built as a Week 2 HTML and CSS assignment.</p>
+  </footer>
+</body>
+</html>
